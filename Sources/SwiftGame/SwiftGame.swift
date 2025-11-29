@@ -74,7 +74,7 @@ struct Game {
         for bullet in bullets {
             bullet.render()
         }
-        Raylib.drawText("Score: \(score)", 400, 0, 25, .darkGray)
+        Raylib.drawText("Score: \(score) - Lives \(player.lives)", 400, 0, 25, .darkGray)
     }
     
     init() {
@@ -146,7 +146,7 @@ struct SwiftGameApp {
         
         var game = Game()
 
-        Raylib.initWindow(screenWidth, screenHeight, "MyGame")
+        Raylib.initWindow(screenWidth, screenHeight, "Dodge The Bullets")
         Raylib.setTargetFPS(60)
         
         while Raylib.windowShouldClose == false {
